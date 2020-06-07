@@ -1,0 +1,4 @@
+{
+    "route": "/postmessage",
+    "allowedRoles": ["authenticated"]
+  }

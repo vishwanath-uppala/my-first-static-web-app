@@ -10,6 +10,9 @@
 
 <body>
   <main>
+
+    <a href="/.auth/login/github">Login</a>
+    <a href="/.auth/logout">Log out</a>
     <h1>Vanilla JavaScript Web App</h1>
     <p>Loading message from the API: <b id="name">...</b></p>
     <p>Post Message API: <b id="postmessage">...</b></p>
@@ -42,15 +45,15 @@
       return response.json(); // parses JSON response into native JavaScript objects
     }
 
-    
+
 
     function myFunction() {
       postData('/api/postmessage', { name: 'Azure' })
-      .then(data => {
-        console.log(data); // JSON data parsed by `response.json()` call
-        document.querySelector('#postmessage').textContent = data.text;
-      });
-      
+        .then(data => {
+          console.log(data); // JSON data parsed by `response.json()` call
+          document.querySelector('#postmessage').textContent = data.text;
+        });
+
     }
 
   </script>
